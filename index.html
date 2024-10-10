@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ismael Mours Portfolio showcasing projects, about me, and contact information.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ismael Mours Portfolio showcasing projects, about me, and contact information."
+    />
     <title>Ismael Mours</title>
-    <link rel="stylesheet" href="./css/style.css">
-    
-    <!-- Load GSAP and Plugins -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" defer></script>
-</head>
-<body>
-    <section class="description panel blue" id="home">
-        <div class="nav-logo">
-            <div class="logo"><p>I'M</p></div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li> 
-                </ul>
-            </nav>
-        </div>
-        <h1 class="main-title">Ismael Mours</h1>
-        <p class="welcome-text">Welcome to my portfolio</p>
-    
-        <div class="scroll-down" aria-label="Scroll down">
-            Scroll down
-            <div class="arrow"></div>
-        </div>
-    </section>
-    
+    <link rel="stylesheet" href="./css/style.css" />
 
-    <section class="panel red" id="about">
-        <h2>About</h2>
+    <!-- Load GSAP and Plugins -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="nav-container blue">
+        <div class="logo">
+          <p>I'M</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+    <section class="description panel blue" id="home">
+      <h1 class="main-title">Ismael Mours</h1>
+      <p class="welcome-text">Welcome to my portfolio</p>
+<img src="./assests/Designer-removebg-preview.png" alt="me">
+      <div class="scroll-down" aria-label="Scroll down">
+        Scroll down
+        <div class="arrow"></div>
+      </div>
+    </section>
+
+    <section class="panel red z-indexing" id="about">
+      <h2>About</h2>
     </section>
 
     <section class="panel orange" id="projects">
-        <h2>Projects</h2>
+      <h2>Projects</h2>
     </section>
 
     <section class="panel purple" id="contact">
-        <h2>Contact</h2>
+      <h2>Contact</h2>
     </section>
 
     <section class="panel green">
-        <footer>
-            <h2>Footer</h2>
-        </footer>
+      <footer>
+        <h2>Footer</h2>
+      </footer>
     </section>
-  
+
     <script src="./script.js" defer></script>
-</body>
+    <script src="./color.js"></script>
+  </body>
 </html>

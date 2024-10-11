@@ -1,0 +1,177 @@
+/* General container for hero section */
+.here-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+
+.text-container {
+    max-width: 600px;
+    margin-right: 40px;
+}
+
+.image-container img {
+    max-width: 400px;
+    height: auto;
+    margin-left: 40px;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--light-color);
+}
+
+.role-title {
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.description-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--light-color);
+    margin-bottom: 10px;
+}
+
+.social-media {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--accent-color);
+}
+
+/* Buttons */
+.button-container {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.btn-projects {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}
+
+.btn-projects:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+.btn-contact {
+    background-color: var(--light-color);
+    color: var(--accent-color);
+}
+
+.btn-contact:hover {
+    background-color: darken(var(--light-color), 10%);
+}
+
+/* Scroll down icon */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.scroll-icon {
+    font-size: 2rem;
+    margin-top: 10px;
+    animation: bounce 0.5s infinite alternate;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .here-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        order: -1; /* Image appears first */
+        margin-bottom: 20px;
+    }
+
+    .image-container img {
+        max-width: 300px;
+    }
+
+    .text-container {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .role-title {
+        font-size: 1.5rem;
+    }
+
+    .description-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .here-container {
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .role-title {
+        font-size: 1.2rem;
+    }
+
+    .description-text {
+        font-size: 0.9rem;
+    }
+
+    .image-container img {
+        max-width: 200px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .scroll-icon {
+        font-size: 1.5rem;
+    }
+}

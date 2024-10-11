@@ -1,43 +1,91 @@
 .nav-container {
-    display: flex;
-    justify-content: space-between; /* Spreads logo and nav */
-    align-items: center;
-    position: fixed; /* Keeps navbar pinned */
-    top: 0;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: var(--primary-dark); /* Navbar background */
-    z-index: 1000; /* Keeps it on top of other elements */
-   
-  }
-  
-  .logo {
-    flex: 1; /* Aligns logo on the left */
-    font-size: 28px;
-    font-weight: bold;
-    text-align: left;
-    color: var(--accent-color);
-  }
-  
-  nav {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Center the nav items */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--primary-dark);
+  z-index: 1000;
+}
+
+.logo {
+  flex: 1;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--accent-color);
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--light-color);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav ul li a i {
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Mobile Styles */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-color);
+  margin: 4px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Adds spacing between nav items */
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: var(--primary-dark);
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
   }
-  
-  nav ul li {
-    display: inline-block;
+
+  nav ul.active {
+      display: flex;
   }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: var(--light-color);
-    font-size: 16px;
+
+  .menu-toggle {
+      display: flex;
   }
-  
+}

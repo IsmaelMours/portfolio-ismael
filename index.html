@@ -7,6 +7,8 @@
       name="description"
       content="Ismael Mours Portfolio showcasing projects, about me, and contact information."
     />
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Ismael Mours</title>
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -21,39 +23,109 @@
     ></script>
   </head>
   <body>
-    <div class="nav-container blue">
-        <div class="logo">
-          <p>I'M</p>
+    <div class="nav-container">
+    <div class="logo">
+        <p>I'M</p>
+    </div>
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+        <ul class="nav-list">
+            <li><a href="#home"> Home</a></li>
+            <li><a href="#about"> About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      
-    <section class="description panel blue" id="home">
-      <h1 class="main-title">Ismael Mours</h1>
-      <p class="welcome-text">Welcome to my portfolio</p>
-<img src="./assests/Designer-removebg-preview.png" alt="me">
-      <div class="scroll-down" aria-label="Scroll down">
-        Scroll down
-        <div class="arrow"></div>
-      </div>
-    </section>
+        </ul>
+    </nav>
+</div>
+  
+<section class="description panel dark" id="home">
+  <div class="here-container">
+      <div class="text-container">
+          <h1 class="main-title">Hi, I'm <span class="color-accent">Ismael</span> Mours</h1>
+          <h2 class="role-title">Fullstack Developer</h2>
+          <p class="description-text">
+              I specialize in creating scalable backend solutions using Spring Boot and Java. With over 2 years of experience, I have worked on both frontend and backend technologies. I'm passionate about delivering clean, efficient, and optimized code to solve real-world problems.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="social-media">
+              <a href="https://www.linkedin.com/in/ismael-mours-4417a2107/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/IsmaelMours" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>  
+          </div>
 
-    <section class="panel red z-indexing" id="about">
-      <h2>About</h2>
-    </section>
+          <!-- Buttons for Contact and Projects -->
+          <div class="button-container">
+              <a href="#projects" class="btn btn-projects">View Projects</a>
+              <a href="#contact" class="btn btn-contact">Contact Me</a>
+          </div>
+      </div>
 
+      <div class="image-container">
+          <img src="./assests/Designer-removebg-preview.png" alt="me">
+      </div>
+  </div>
+
+  <div class="scroll-down" aria-label="Scroll down">
+      <i class="fas fa-angle-double-down scroll-icon"></i>
+  </div>
+</section>
+
+    
+    <section class="about-me panel dark" id="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+          <div class="skills">
+              <h3>Skills</h3>
+              <div class="skill-category">
+                  <button class="toggle-button" id="frontend-toggle" onclick="toggleSkills('frontend-skills')">Frontend Skills</button>
+                  <ul class="skill-list frontend-skills" id="frontend-skills" style="display: block;"> <!-- Expanded by default -->
+                      <li><i class="fab fa-react"></i> React</li>
+                      <li><i class="fab fa-angular"></i> Angular</li>
+                      <li><i class="fas fa-code"></i> HTML</li>
+                      <li><i class="fas fa-paint-brush"></i> CSS</li>
+                      <li><i class="fab fa-js"></i> JavaScript</li>
+                  </ul>
+              </div>
+              <div class="skill-category">
+                  <button class="toggle-button" id="backend-toggle" onclick="toggleSkills('backend-skills')">Backend Skills</button>
+                  <ul class="skill-list backend-skills" id="backend-skills" style="display: none;"> <!-- Collapsed by default -->
+                      <li><i class="fab fa-java"></i> Java</li>
+                      <li><i class="fas fa-leaf"></i> Spring Boot</li>
+                      <li><i class="fab fa-node-js"></i> Express.js</li>
+                      <li><i class="fas fa-database"></i> MySQL</li>
+                      <li><i class="fas fa-server"></i> MongoDB</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="experience">
+              <h3>Experience</h3>
+              <div class="experience-item">
+                  <button class="toggle-button" onclick="toggleExperience('experience1')">Junior Full Stack Developer at Wits Incubator</button>
+                  <div class="experience-details" id="experience1" style="display: block;"> <!-- Expanded by default -->
+                      <p>Duration: July 2023 - June 2024</p>
+                      <p>Responsibilities: Developed and maintained web applications, collaborated with cross-functional teams, and implemented user-friendly interfaces.</p>
+                  </div>
+              </div>
+              <div class="experience-item">
+                  <button class="toggle-button" onclick="toggleExperience('experience2')">Intern Full Stack Developer at Dynamic DNA</button>
+                  <div class="experience-details" id="experience2" style="display: block;"> <!-- Expanded by default -->
+                      <p>Duration: February 2022 - January 2023</p>
+                      <p>Responsibilities: Assisted in developing backend services, participated in code reviews, and learned various development tools and practices.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
     <section class="panel orange" id="projects">
       <h2>Projects</h2>
     </section>
 
     <section class="panel purple" id="contact">
+
       <h2>Contact</h2>
     </section>
 
@@ -65,5 +137,7 @@
 
     <script src="./script.js" defer></script>
     <script src="./color.js"></script>
+    <script src="./about.js"></script>
+
   </body>
 </html>

@@ -2,6 +2,7 @@
 @import url('../css/sections/navbar.css'); 
 @import url('../css/sections/hero.css');
 @import url('../css/sections/about.css');
+@import url('../css/sections/project.css');
 
 /* Color variables */
 :root {

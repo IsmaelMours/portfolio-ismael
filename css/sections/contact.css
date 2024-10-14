@@ -1,0 +1,103 @@
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: var(--primary-dark);
+    color: var(--light-color);
+    text-align: center;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--light-color);
+}
+
+.contact a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: center; /* Center the flex items horizontally */
+    align-items: center;    /* Center the flex items vertically */
+    flex-wrap: wrap;        /* Allow wrapping for smaller screens */
+}
+
+/* Contact Form */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Increased max width for the form */
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-dark);
+    color: var(--light-color);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--light-color);
+}
+
+.contact-form input[type="submit"] {
+    background-color: var(--accent-color);
+    color: var(--primary-dark);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #E66012; /* Slightly darker accent color */
+}
+
+/* Contact Image */
+.contact-img {
+    width: 100%;
+    max-width: 500px; /* Set max width for the image container */
+    margin-left: 20px; /* Space between form and image */
+}
+
+.contact-img__image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center;     /* Center items horizontally */
+    }
+
+    .contact-form,
+    .contact-img {
+        margin-bottom: 20px;
+        max-width: 100%; /* Allow full width for smaller screens */
+    }
+
+    .contact-form form,
+    .contact-img__image {
+        width: 100%;
+    }
+}

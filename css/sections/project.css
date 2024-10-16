@@ -4,6 +4,7 @@
   gap: 20px;
   justify-content: center; /* To center the cards horizontally */
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 /* Styling for individual cards */
@@ -68,3 +69,24 @@ section h2 {
   min-height: 100vh;
   padding: 40px 0; /* Adjust padding for better spacing */
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: var(--primary-dark);
+}
+

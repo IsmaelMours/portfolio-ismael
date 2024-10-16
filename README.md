@@ -10,7 +10,7 @@ This is the personal portfolio website for **Ismael Mours**, a full-stack develo
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+
 
 ## Overview
 

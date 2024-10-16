@@ -125,33 +125,42 @@
   
   <section class="panel dark">
     <h2>Projects</h2>
-    <div class="card-container">
-      <!-- Birthday Stokvel App -->
-      <div class="card">
-         <img src="./assests/birthday.jpeg" alt="Birthday Stokvel App" class="card-image">
-         <h3 class="card-title">Birthday Stokvel</h3>
-         <p class="card-description">An app to manage group savings for birthday celebrations with fun, vibrant designs.</p>
-         <button class="card-button">View project</button>
-      </div>
-   
-      <!-- Lotto App -->
-      <div class="card">
-         <img src="./assests/lotto.jpeg" alt="Lotto App" class="card-image">
-         <h3 class="card-title">Lotto App</h3>
-         <p class="card-description">A lottery app designed to give users a fun, exciting experience with chances to win big.</p>
-         <button class="card-button">View project</button>
-      </div>
-   
-      <!-- Chat App -->
-      <div class="card">
-         <img src="./assests/chat.jpeg" alt="Chat App" class="card-image">
-         <h3 class="card-title">Chat App</h3>
-         <p class="card-description">A seamless communication app with modern, user-friendly designs for connecting people.</p>
-         <button class="card-button">View project</button>
-      </div>
-   </div>
-   
+
+    <div class="card-container" id="card-container">
+        <!-- Birthday Stokvel App -->
+        <div class="card">
+            <img src="./assests/birthday.jpeg" alt="Birthday Stokvel App" class="card-image">
+            <h3 class="card-title">Birthday Stokvel</h3>
+            <p class="card-description">An app to manage group savings for birthday celebrations with fun, vibrant designs.</p>
+            <button class="card-button">View project</button>
+        </div>
+
+        <!-- Lotto App -->
+        <div class="card">
+            <img src="./assests/lotto.jpeg" alt="Lotto App" class="card-image">
+            <h3 class="card-title">Lotto App</h3>
+            <p class="card-description">A lottery app designed to give users a fun, exciting experience with chances to win big.</p>
+            <button class="card-button">View project</button>
+        </div>
+
+        <!-- Chat App -->
+        <div class="card">
+            <img src="./assests/chat.jpeg" alt="Chat App" class="card-image">
+            <h3 class="card-title">Chat App</h3>
+            <p class="card-description">A seamless communication app with modern, user-friendly designs for connecting people.</p>
+            <button class="card-button">View project</button>
+        </div>
+        
+        <!-- Additional cards can be added here -->
+    </div>
+
+    <div class="pagination" id="pagination">
+        <button id="prev-button">Previous</button>
+        <span id="page-info">Page 1 of 1</span>
+        <button id="next-button">Next</button>
+    </div>
 </section>
+
 
   
   
@@ -201,8 +210,8 @@
 </section>
 
 
-    <script src="./script.js" defer></script>
-    <script src="./about.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/about.js"></script>
 
   </body>
 </html>

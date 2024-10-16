@@ -1,3 +1,25 @@
+nav ul li a, 
+.btn-projects {
+  display: inline-block; /* Ensure alignment with other nav items */
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--light-color);
+  font-size: 16px;
+}
+
+.btn-projects {
+  background-color: var(--accent-color);
+  color: var(--primary-dark);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px; /* Space between the button and other nav items */
+}
+
+.btn-projects:hover {
+  background-color: #e0a800;
+  color: var(--light-color);
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -41,12 +63,6 @@ nav ul li a {
   font-size: 16px;
   display: flex;
   align-items: center;
-  gap: 5px;
-}
-
-nav ul li a i {
-  font-size: 18px;
-  transition: color 0.3s;
 }
 
 nav ul li a:hover {

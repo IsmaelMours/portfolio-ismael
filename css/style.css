@@ -32,7 +32,7 @@ html, body {
     position: relative; /* Necessary for scroll arrow positioning */
 }
 .footer-panel {
-    height: 35vh;
+    height: 60vh;
     color: var(--light-color); /* Text color */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative; /* Necessary for scroll arrow positioning */

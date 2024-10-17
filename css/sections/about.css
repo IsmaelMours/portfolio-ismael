@@ -61,40 +61,63 @@
     margin-top: 30px;
 }
 
-/* Add scroll functionality for small screens */
+/* General mobile responsiveness */
 @media (max-width: 768px) {
-    .about-container {
-        padding: 10px 10px; /* Reduce padding for smaller screens */
-        flex-direction: column; /* Stack the columns on small screens */
-        height: 100vh; /* Set a maximum height for the container */
-        overflow-y: auto; /* Add vertical scroll when content overflows */
+    /* Ensure panels adjust dynamically */
+    .panel {
+        min-height: 100vh; /* Full viewport height for each panel */
+        height: auto; /* Allow panels to expand based on content */
+        overflow-y: auto; /* Enable scrolling within panels */
+        padding: 20px; /* Add some padding for content */
     }
-
     .skills, .experience {
         width: 100%; /* Make each section full-width on smaller screens */
         margin: 10px 0;
     }
 
+    /* Flexbox adjustments for stacking content vertically */
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Reduce padding */
+        height: auto; /* Remove fixed height */
+    }
+
+    /* Buttons and text adjustments for smaller screens */
+    section h2 {
+        font-size: 24px; /* Smaller font size for headings */
+        margin-top: 20px;
+    }
+
     .toggle-button {
-        font-size: 14px; /* Reduce font size for smaller screens */
+        font-size: 14px; /* Smaller font size for buttons */
         padding: 8px;
     }
 
-    .experience-item {
-        margin-top: 20px;
+    .experience-item, .skill-category {
+        margin-top: 20px; /* Adjust spacing */
     }
 }
 
-/* Media Query for Extra Small Screens (Phones) */
+/* Extra small devices (Phones) */
 @media (max-width: 480px) {
+    .panel {
+        min-height: 100vh; /* Full viewport height */
+        height: auto; /* Allow dynamic height */
+        overflow-y: auto; /* Enable internal scrolling */
+        padding: 10px 20px; /* Reduce padding on mobile */
+    }
+
     .about-container {
-        padding: 10px 20px; /* Further reduce padding on phones */
-        height: 100vh; /* Set maximum height */
-        overflow-y: auto; /* Enable vertical scroll */
+        padding: 5px; /* Further reduce padding for small screens */
+    }
+
+    section h2 {
+        font-size: 18px; /* Smaller font size for phones */
+        margin-top: 10px;
     }
 
     .toggle-button {
-        font-size: 13px; /* Adjust button font size for phones */
+        font-size: 12px; /* Adjust button size */
         padding: 6px;
     }
 }

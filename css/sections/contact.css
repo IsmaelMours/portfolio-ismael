@@ -40,8 +40,9 @@
 .contact-form form {
     display: flex;
     flex-direction: column;
-    width: 190%;
-    max-width: 1000px; /* Increased max width for the form */
+    width: 100%; /* Adjusted to fit container width */
+    max-width: 600px; /* Limit max width for better readability */
+    margin: 0 auto; /* Center form on smaller screens */
 }
 
 .contact-form input,
@@ -84,21 +85,52 @@
     border-radius: 10px;
 }
 
-/* Responsive Styles */
+/* Responsive Media Queries */
+
+/* For Tablets and smaller devices */
 @media (max-width: 768px) {
     .contact-container {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        align-items: center;     /* Center items horizontally */
+        padding: 40px 20px;
+        flex-direction: column; /* Stack form and image vertically */
     }
 
-    .contact-form,
+    .contact-form {
+        margin-bottom: 20px; /* Add space between form and image */
+    }
+
+    .contact-form form {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 100%; /* Remove max width limitation */
+    }
+
     .contact-img {
-        margin-bottom: 20px;
-        max-width: 100%; /* Allow full width for smaller screens */
+        display: none; /* Hide the contact image on small screens */
+    }
+}
+
+/* For Mobile Devices (Small phones) */
+@media (max-width: 480px) {
+    .contact h2 {
+        font-size: 24px; /* Reduce heading size */
+        margin-top: 20px;
     }
 
-    .contact-form form,
-    .contact-img__image {
-        width: 100%;
+    .contact p {
+        font-size: 1em; /* Adjust text size */
+        margin-bottom: 20px;
+    }
+
+    .contact-container {
+        padding: 20px 10px; /* Reduce padding for small screens */
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px; /* Reduce padding for input fields */
+        font-size: 0.9em; /* Smaller font for inputs */
+    }
+
+    .contact-form input[type="submit"] {
+        padding: 10px; /* Adjust padding for submit button */
+        font-size: 1em; /* Adjust font size */
     }
 }

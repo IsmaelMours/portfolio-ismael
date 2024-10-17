@@ -7,12 +7,13 @@
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 40px 20px;
+    text-align: center; /* Center text for smaller screens */
 }
 
 .footer-logo {
     font-size: 2rem;
-    margin-top: 80px;
+    margin-top: 40px;
     font-weight: bold;
     color: var(--light-color);
     text-decoration: none;
@@ -25,12 +26,14 @@
 
 .social-links {
     margin: 20px 0;
+    display: flex;
+    justify-content: center; /* Center social icons */
+    gap: 20px; /* Add some spacing between icons */
 }
 
 .social-links a {
     font-size: 1.5rem;
     color: var(--light-color);
-    margin: 0 10px;
     transition: color 0.3s ease;
 }
 
@@ -38,16 +41,18 @@
     color: var(--accent-color);
 }
 
+/* Footer Navigation */
 .footer-nav {
     list-style: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
+    gap: 20px; /* Add spacing between links */
 }
 
 .footer-nav li {
-    margin: 0 5px;
+    margin: 0;
 }
 
 .footer-nav a {
@@ -68,6 +73,7 @@
 .footer-bottom p {
     font-size: 0.9rem;
     color: var(--light-color);
+    margin-bottom: 0; /* Prevent excessive spacing at the bottom */
 }
 
 .footer-bottom .designer {
@@ -75,20 +81,56 @@
 }
 
 /* Responsive Styles */
+
+/* For tablets and smaller devices */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
+        padding: 20px 10px; /* Reduce padding on smaller screens */
+    }
+
+    .footer-logo {
+        margin-top: 20px; /* Reduce top margin for logo */
+        font-size: 1.8rem; /* Slightly smaller font size */
+    }
+
+    .social-links {
+        margin: 15px 0; /* Adjust margin for social links */
+        gap: 15px; /* Reduce gap between icons */
     }
 
     .footer-nav {
-        flex-direction: column;
+       
+        gap: 10px; /* Adjust gap between links */
     }
 
     .footer-nav li {
-        margin: 10px 0;
+        margin: 5px 0; /* Adjust margins for links */
     }
-    .footer-panel {
-        height: 100vh;
-        
+
+    .footer-bottom p {
+        font-size: 0.8rem; /* Smaller font size for copyright text */
+    }
+}
+
+/* For mobile devices (small screens) */
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 10px 10px; /* Further reduce padding for mobile */
+    }
+
+    .footer-logo {
+        font-size: 1.6rem; /* Further reduce logo font size */
+    }
+
+    .social-links a {
+        font-size: 1.2rem; /* Smaller icons */
+    }
+
+    .footer-nav {
+        gap: 8px; /* Reduce gap between navigation links */
+    }
+
+    .footer-bottom p {
+        font-size: 0.7rem; /* Smaller copyright text */
     }
 }

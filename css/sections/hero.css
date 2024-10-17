@@ -108,6 +108,7 @@
 /* Buttons */
 .button-container {
     margin-top: 20px;
+    margin-left: -15px;
     opacity: 0;
     animation: fadeInText 3.5s ease forwards;
 }

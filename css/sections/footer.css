@@ -7,15 +7,16 @@
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0px 20px;
 }
 
 .footer-logo {
     font-size: 2rem;
+    margin-top: 80px;
     font-weight: bold;
     color: var(--light-color);
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .footer-logo-text {
@@ -40,24 +41,24 @@
 .footer-nav {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 10px 0;
     display: flex;
     justify-content: center;
 }
 
 .footer-nav li {
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 .footer-nav a {
-    color: var(--light-color);
+    color: var(--accent-color);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .footer-nav a:hover {
-    color: var(--accent-color);
+    color: var(--light-color);
 }
 
 .footer-bottom {

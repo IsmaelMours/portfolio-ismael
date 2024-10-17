@@ -25,13 +25,14 @@ html, body {
 
 /* Panels for different sections */
 .panel {
+
     height: 100vh;
     color: var(--light-color); /* Text color */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative; /* Necessary for scroll arrow positioning */
 }
 .footer-panel {
-    height: 40vh;
+    height: 35vh;
     color: var(--light-color); /* Text color */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative; /* Necessary for scroll arrow positioning */
@@ -39,6 +40,11 @@ html, body {
 
 .dark { 
     background-color: var(--primary-dark); /* Use Primary Dark */
+}
+
+
+.sec{
+    background-color: var(--secondary-dark);
 }
 
 .secondary-dark {

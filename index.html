@@ -242,6 +242,25 @@
 
   
     </section>
+    <!-- Floating chatbot button -->
+    <div class="chatbot-icon" id="chatbot-icon">
+      <i class="fas fa-comments"></i>
+    </div>
+  
+    <!-- Existing Chatbot Container (Hidden initially) -->
+    <div class="chatbot-container" id="chatbot-container">
+      <div class="chatbot-header">
+        <img src="./assests/banner.PNG" alt="Chat Icon" class="chatbot-header-img" />
+      </div>
+      
+      <div class="chatbot-body" id="chatbot-body">
+        <div class="chat-output" id="chat-output"></div>
+        <div class="chat-input">
+          <input type="text" id="user-input" placeholder="Type your message..." />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
 
     <section class="contact panel dark" id="contact">
       <h2>Contact Me</h2>
@@ -313,6 +332,7 @@
     <script src="./js/script.js" defer></script>
     <script src="./js/about.js"></script>
     <script src="./js/responsive.js"></script>
+    <script src="./js/chat.js"></script>
 
   </body>
 </html>

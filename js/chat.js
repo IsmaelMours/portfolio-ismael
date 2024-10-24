@@ -10,9 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const isChatbotVisible = chatbotContainer.style.display === "block";
 
     if (isChatbotVisible) {
+      // Hide chatbot and clear conversation
       chatbotContainer.style.display = "none";
       chatbotIcon.innerHTML = '<i class="fas fa-comments"></i>'; // Icon for opening
+      chatOutput.innerHTML = ""; // Clear the conversation when closing the chatbot
     } else {
+      // Show chatbot
       chatbotContainer.style.display = "block";
       chatbotIcon.innerHTML = '<i class="fas fa-times"></i>'; // Icon for closing
     }
@@ -22,13 +25,23 @@ document.addEventListener("DOMContentLoaded", function () {
   sendBtn.addEventListener("click", function () {
     const message = userInput.value.trim();
     if (message) {
-      const userMessage = `<div class="user-message">You: ${message}</div>`;
+      // Add user message with icon
+      const userMessage = `
+        <div class="user-message">
+          <div class="message-icon"><i class="fas fa-user"></i></div>
+          <div class="message-content">You: ${message}</div>
+        </div>`;
       chatOutput.innerHTML += userMessage;
 
       // Simulate a chatbot response
       setTimeout(() => {
         const botResponse = getChatbotResponse(message);
-        chatOutput.innerHTML += botResponse;
+        // Add bot message with icon
+        chatOutput.innerHTML += `
+          <div class="bot-message">
+            <div class="message-content">${botResponse}</div>
+            <div class="message-icon"><i class="fas fa-robot"></i></div>
+          </div>`;
         chatOutput.scrollTop = chatOutput.scrollHeight; // Scroll to the bottom
       }, 500);
 
@@ -42,15 +55,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const lowerCaseMessage = userMessage.toLowerCase();
 
     if (lowerCaseMessage.includes("who are you") || lowerCaseMessage.includes("introduction")) {
-      return `<div class="bot-message">Bot: I'm Ismael Mours, a Junior Full Stack Developer based in Johannesburg. I specialize in building efficient web applications and REST APIs.</div>`;
+      return "Bot: I'm Ismael Mours, a Junior Full Stack Developer based in Johannesburg. I specialize in building efficient web applications and REST APIs.";
     } else if (lowerCaseMessage.includes("skills") || lowerCaseMessage.includes("competencies")) {
-      return `<div class="bot-message">Bot: I have experience in Back End Development with Java and Spring Boot, as well as front-end technologies like React, JavaScript, HTML, CSS, and Tailwind.</div>`;
+      return "Bot: I have experience in Back End Development with Java and Spring Boot, as well as front-end technologies like React, JavaScript, HTML, CSS, and Tailwind.";
     } else if (lowerCaseMessage.includes("projects") || lowerCaseMessage.includes("work")) {
-      return `<div class="bot-message">Bot: I've worked on various projects, including a Property Maintenance System and a Birthday Stokvel for managing group savings.</div>`;
+      return "Bot: I've worked on various projects, including a Property Maintenance System and a Birthday Stokvel for managing group savings.";
     } else if (lowerCaseMessage.includes("contact") || lowerCaseMessage.includes("reach")) {
-      return `<div class="bot-message">Bot: You can reach me at 0730662618 or email me at monnapuleismaelmours@gmail.com.</div>`;
+      return "Bot: You can reach me at 0730662618 or email me at monnapuleismaelmours@gmail.com.";
     } else {
-      return `<div class="bot-message">Bot: I’m here to assist you. What would you like to know more about?</div>`;
+      return "Bot: I’m here to assist you. What would you like to know more about?";
     }
   }
 });
